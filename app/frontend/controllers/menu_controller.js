@@ -1,21 +1,38 @@
 import { Controller } from "stimulus";
 
 export default class extends Controller {
-  static targets = ["button", "dropdown"];
+  static targets = [
+    "profileButton",
+    "profileDropdown",
+    "mainButton",
+    "mainDropdown",
+  ];
 
-  toggle() {
-    // console.log(this.dropdownTarget);
-    this.dropdownTarget.classList.toggle("hidden");
+  toggle(event) {
+    if (event && this.profileButtonTarget.contains(event.target)) {
+      this.profileDropdownTarget.classList.toggle("hidden");
+      if (!this.mainDropdownTarget.classList.contains("hidden"))
+        this.mainDropdownTarget.classList.add("hidden");
+    } else if (event && this.mainButtonTarget.contains(event.target)) {
+      this.mainDropdownTarget.classList.toggle("hidden");
+      if (!this.profileDropdownTarget.classList.contains("hidden"))
+        this.profileDropdownTarget.classList.add("hidden");
+    }
   }
 
   hide(event) {
     if (
-      (event && this.dropdownTarget.contains(event.target)) ||
-      this.buttonTarget.contains(event.target)
+      event &&
+      (this.profileDropdownTarget.contains(event.target) ||
+        this.profileButtonTarget.contains(event.target) ||
+        this.mainDropdownTarget.contains(event.target) ||
+        this.mainButtonTarget.contains(event.target))
     ) {
       return;
     }
-    if (!this.dropdownTarget.classList.contains("hidden"))
-      this.dropdownTarget.classList.add("hidden");
+    if (!this.profileDropdownTarget.classList.contains("hidden"))
+      this.profileDropdownTarget.classList.add("hidden");
+    if (!this.mainDropdownTarget.classList.contains("hidden"))
+      this.mainDropdownTarget.classList.add("hidden");
   }
 }

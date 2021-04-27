@@ -3,4 +3,8 @@
 @import "tailwindcss/components";
 
 /* Add any custom CSS here */
+.cal-h {
+    height: calc(100vh - 4rem)
+}
+
 @import "tailwindcss/utilities";

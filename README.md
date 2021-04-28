@@ -9,7 +9,7 @@
 - Tailwindcss
 
 ## Local Development Setup
-- Install the latest [Node.js](https://nodejs.org) version.
+- Install the latest [Node.js](https://nodejs.org) version. Make sure that [npm](https://www.npmjs.com/) is installed with it as well.
 - Install yarn
 - Install postgres
 - Clone repo (git clone https://github.com/MA-Ahmad/quickstart-rails-tailwind)

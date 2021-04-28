@@ -1,24 +1,31 @@
-# README
+<h3 align="center">Quickstart</h3>
+<p align="center">this is a base project to quickly spin up a Rails+Tailwindcss application.</p>
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Built with
 
-Things you may want to cover:
+- Ruby (3.0.1)
+- Ruby on Rails (6.1.3.1)
+- Stimulus (2.0.0)
+- Tailwindcss
 
-* Ruby version
+## How to use
 
-* System dependencies
+- clone repo
+- rails db:create
+- rails db:migrate
 
-* Configuration
+## 🤝 Contributing
 
-* Database creation
+Contributions, issues and feature requests are welcome! Start by:
 
-* Database initialization
+- Forking the project
+- Cloning the project to your local machine
+- `cd` into the project directory
+- Run `git checkout -b your-branch-name`
+- Make your contributions
+- Push your branch up to your forked repository
+- Open a Pull Request with a detailed description to the development branch of the original project for a review
 
-* How to run the test suite
+## Show your support
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Give a ⭐️ if you like this project!

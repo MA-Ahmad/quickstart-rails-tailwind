@@ -1,5 +1,5 @@
 <h3 align="center">Quickstart</h3>
-<p align="center">this is a base project to quickly spin up a Rails+Tailwindcss application.</p>
+<p align="center">This is a base project to quickly spin up a Rails+Tailwindcss application.</p>
 
 ## Built with
 
@@ -8,11 +8,12 @@
 - Stimulus (2.0.0)
 - Tailwindcss
 
-## How to use
-
-- clone repo
-- rails db:create
-- rails db:migrate
+## Local Development Setup
+- Install the latest [Node.js](https://nodejs.org) version.
+- Install yarn
+- Install postgres
+- Clone repo (git clone https://github.com/MA-Ahmad/quickstart-rails-tailwind)
+- Run commands (rails db:create, rails db:migrate)
 
 ## 🤝 Contributing
 

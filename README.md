@@ -13,7 +13,8 @@
 - Install [yarn](https://classic.yarnpkg.com/en/docs/install/#mac-stable).
 - Install latest [postgres](https://www.postgresql.org/).
 - Make sure ruby latest version is installed.
-- Clone repo (git clone https://github.com/MA-Ahmad/quickstart-rails-tailwind).
+- Cloning the project to your local machine
+- cd into the project directory
 - Run commands (rails db:create, rails db:migrate).
 
 ## 🤝 Contributing

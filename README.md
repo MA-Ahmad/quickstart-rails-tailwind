@@ -12,6 +12,7 @@
 - Install the latest [Node.js](https://nodejs.org) version. Make sure that [npm](https://www.npmjs.com/) is installed with it as well.
 - Install [yarn](https://classic.yarnpkg.com/en/docs/install/#mac-stable).
 - Install latest [postgres](https://www.postgresql.org/).
+- Make sure ruby latest version is installed.
 - Clone repo (git clone https://github.com/MA-Ahmad/quickstart-rails-tailwind).
 - Run commands (rails db:create, rails db:migrate).
 

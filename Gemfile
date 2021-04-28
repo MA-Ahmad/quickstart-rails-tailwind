@@ -57,5 +57,3 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 # authentication
 gem 'devise'
-
-gem "view_component", require: "view_component/engine"

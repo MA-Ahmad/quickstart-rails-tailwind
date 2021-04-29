@@ -22,13 +22,11 @@
             <div class="flex-1 flex items-center justify-center sm:items-stretch sm:justify-start">
                 <div class="flex-shrink-0 flex items-center">
                     <a href="<%= root_path %>">
-                        <img class="block lg:hidden h-8 w-auto rounded-md" src="/assets/logo.png"
-                            alt="Quickstart">
+                        <img class="block lg:hidden h-8 w-auto rounded-md" src="/assets/logo.png" alt="Quickstart">
                     </a>
                     <a href="<%= root_path %>">
                         <div class="lg:flex items-center bg-white rounded-md hidden">
-                            <img class="h-8 w-auto rounded-tl-md rounded-bl-md" src="/assets/logo.png"
-                                alt="Quickstart">
+                            <img class="h-8 w-auto rounded-tl-md rounded-bl-md" src="/assets/logo.png" alt="Quickstart">
                             <h2 class="bg-white text-blue-700 px-2 text-sm font-medium">QuickStart</h2>
                         </div>
                     </a>
@@ -47,9 +45,19 @@
                     </div>
                 </div>
             </div>
-            <% if user_signed_in? %>
+
             <div class="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
-                <div class="ml-3 relative">
+                <a href="https://github.com/MA-Ahmad/quickstart-rails-tailwind" target="_blank">
+                    <button
+                        class="bg-gray-800 rounded-full text-gray-400 hover:text-white focus:outline-none focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white">
+                        <span class="sr-only">View code</span>
+                        <span class="text-3xl">
+                            <i class="fab fa-github"></i>
+                        </span>
+                    </button>
+                </a>
+                <% if user_signed_in? %>
+                <div class="ml-5 relative">
                     <div>
                         <button data-menu-target="profileButton"
                             data-action="click->menu#toggle click@window->menu#hide" type="button"
@@ -73,20 +81,20 @@
                         <%#= link_to "Sign Out", destroy_user_session_path, method: :delete %>
                     </div>
                 </div>
+                <% end %>
             </div>
-            <% end %>
         </div>
     </div>
 
     <div class="sm:hidden hidden" id="mobile-menu" data-menu-target="mainDropdown">
         <div class="px-2 pt-2 pb-3 space-y-1">
-            <a href="<%= root_path %>" class="bg-gray-900 text-white block px-3 py-2 rounded-md text-base font-medium"
-                aria-current="page">Dashboard</a>
+            <a href="<%= features_path %>" class="bg-gray-900 text-white block px-3 py-2 rounded-md text-base font-medium"
+                aria-current="page">Features</a>
 
-            <a href="#"
+            <a href="<%= team_path %>"
                 class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Team</a>
 
-            <a href="#"
+            <a href="<%= projects_path %>"
                 class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Projects</a>
 
         </div>

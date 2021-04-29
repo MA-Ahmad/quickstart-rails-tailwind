@@ -12,12 +12,14 @@
   <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
 </head>
 
-<body class="bg-gray-50 cal-h">
+<body>
   <% if user_signed_in? %>
     <%= render 'shared/header' %>
   <% end %>
 
-  <%= yield %>
+  <div class="bg-gray-50 calc-h">
+      <%= yield %>
+  </div>
   
 </body>
 

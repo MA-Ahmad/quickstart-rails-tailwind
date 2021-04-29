@@ -7,6 +7,16 @@
     <%= render "devise/shared/error_messages", resource: resource %>
 
     <div>
+      <%= f.label :first_name, class: "label" %>
+      <%= f.text_field :first_name, autofocus: true, autocomplete: "first_name", placeholder: "First Name" ,class: "appearance-none rounded relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-t-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm" %>
+    </div>
+  
+    <div>
+      <%= f.label :last_name, class: "label" %>
+      <%= f.text_field :last_name, autofocus: true, autocomplete: "last_name", placeholder: "Last Name" ,class: "appearance-none rounded relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-t-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm" %>
+    </div>
+
+    <div>
       <%= f.label :email, class: "label" %>
       <%= f.email_field :email, autocomplete: "email", placeholder: "Email", class: "appearance-none rounded relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-t-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm" %>
     </div>
@@ -53,7 +63,7 @@
       <%= link_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete, class: "font-medium text-indigo-600 hover:text-indigo-500 pl-3" %>
     </div>
     <div class="flex justify-center">
-      <%= link_to "Back", :back, class: "font-medium text-indigo-600 hover:text-indigo-500" %>
+      <%= link_to "Home", root_path, class: "font-medium text-indigo-600 hover:text-indigo-500" %>
     </div>
   </div>
 </div>

@@ -59,11 +59,7 @@
   </div>
   <div class="flex flex-col justify-center mt-5 space-y-4">
     <div>
-      Are you Unhappy?
-      <%= link_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete, class: "font-medium text-indigo-600 hover:text-indigo-500 pl-3" %>
-    </div>
-    <div class="flex justify-center">
-      <%= link_to "Home", root_path, class: "font-medium text-indigo-600 hover:text-indigo-500" %>
+      <%= link_to "Delete my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete, class: "group relative w-full flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-red-600 hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500" %>
     </div>
   </div>
 </div>

@@ -3,10 +3,11 @@
 
 ## Built with
 
-- Ruby (3.0.1)
-- Ruby on Rails (6.1.3.1)
-- Stimulus (2.0.0)
-- Tailwindcss
+- [Ruby (3.0.1)](https://www.ruby-lang.org/en/)
+- [Ruby on Rails (6.1.3.1)](https://rubyonrails.org/)
+- [Stimulus (2.0.0)](https://stimulus.hotwire.dev/)
+- [Tailwindcss (2.1.2)](https://tailwindcss.com/)
+- [View_component](https://viewcomponent.org/)
 
 ## Local Development Setup
 - Install the latest [Node.js](https://nodejs.org) version. Make sure that [npm](https://www.npmjs.com/) is installed with it as well.

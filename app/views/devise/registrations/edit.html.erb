@@ -7,6 +7,16 @@
     <%= render "devise/shared/error_messages", resource: resource %>
 
     <div>
+      <%= f.label :first_name, class: "label" %>
+      <%= f.text_field :first_name, autofocus: true, autocomplete: "first_name", placeholder: "First Name" ,class: "appearance-none rounded relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-t-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm" %>
+    </div>
+  
+    <div>
+      <%= f.label :last_name, class: "label" %>
+      <%= f.text_field :last_name, autofocus: true, autocomplete: "last_name", placeholder: "Last Name" ,class: "appearance-none rounded relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-t-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm" %>
+    </div>
+
+    <div>
       <%= f.label :email, class: "label" %>
       <%= f.email_field :email, autocomplete: "email", placeholder: "Email", class: "appearance-none rounded relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-t-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm" %>
     </div>

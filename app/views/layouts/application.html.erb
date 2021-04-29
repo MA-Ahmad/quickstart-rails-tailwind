@@ -13,6 +13,18 @@
 </head>
 
 <body class="bg-gray-50">
+   <% flash.each do |type, message| %>
+    <% if type == "alert" %>
+      <div class="bg-red-500">
+        <div class="container px-2 mx-auto py-4 text-white text-center font-medium font-sans"><%= message %></div>
+      </div>
+    <% end %>
+    <% if type == "notice" %>
+      <div class="bg-green-500">
+        <div class="container px-2 mx-auto py-4 text-white text-center font-medium font-sans"><%= message %></div>
+      </div>
+    <% end %>
+  <% end %>
   <% if user_signed_in? %>
     <%= render 'shared/header' %>
   <% end %>

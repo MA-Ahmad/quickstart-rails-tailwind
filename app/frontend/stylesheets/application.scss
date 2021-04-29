@@ -7,6 +7,10 @@
     height: calc(100vh - 4rem)
 }
 
+.calc-top {
+    margin-top: calc(100vh - 4rem)
+}
+
 // Countdown animation for notification controller
 @keyframes notification-countdown {
     from {

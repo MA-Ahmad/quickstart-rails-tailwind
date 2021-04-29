@@ -13,9 +13,11 @@
 </head>
 
 <body>
-  <% if user_signed_in? %>
+  <!-- <% if user_signed_in? %>
     <%= render 'shared/header' %>
-  <% end %>
+  <% end %> -->
+
+  <%= render 'shared/header' %>
 
   <div class="bg-gray-50 calc-h">
       <%= yield %>

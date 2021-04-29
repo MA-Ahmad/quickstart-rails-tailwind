@@ -7,4 +7,14 @@
     height: calc(100vh - 4rem)
 }
 
+// Countdown animation for notification controller
+@keyframes notification-countdown {
+    from {
+      width: 100%;
+    }
+    to {
+      width: 0;
+    }
+  }
+
 @import "tailwindcss/utilities";

@@ -1,5 +1,5 @@
 <% if resource.errors.any? %>
-  <div class="text-red-500">
+  <!-- <div class="text-red-500">
     <h2>
       <%= I18n.t("errors.messages.not_saved",
                  count: resource.errors.count,
@@ -11,5 +11,14 @@
         <li><%= message %></li>
       <% end %>
     </ul>
-  </div>
+  </div> -->
+  <% messages = [] %>
+  <% resource.errors.full_messages.each do |data| %>
+    <% messages << data %>
+  <% end %>
+  <div class="fixed inset-0 px-4 py-6 pointer-events-none sm:p-6 sm:items-start sm:justify-end">
+      <div id="notifications" class="flex flex-col items-end justify-center">
+          <%= render NotificationComponent.new(type: 'error', data: {messages: messages }) %>
+      </div>
+    </div>
 <% end %>

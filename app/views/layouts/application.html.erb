@@ -13,11 +13,32 @@
 </head>
 
 <body class="bg-gray-50 cal-h">
+  <!-- <% flash.each do |type, message| %>
+    <% if type == "alert" %>
+      <div class="bg-red-500">
+        <div class="container px-2 mx-auto py-4 text-white text-center font-medium font-sans"><%= message %></div>
+      </div>
+    <% end %>
+    <% if type == "notice" %>
+      <div class="bg-green-500">
+        <div class="container px-2 mx-auto py-4 text-white text-center font-medium font-sans"><%= message %></div>
+      </div>
+    <% end %>
+  <% end %> -->
   <% if user_signed_in? %>
     <%= render 'shared/header' %>
   <% end %>
 
   <%= yield %>
+  
+
+  <div class="fixed inset-0 px-4 py-6 pointer-events-none sm:p-6 sm:items-start sm:justify-end">
+    <div id="notifications" class="flex flex-col items-end justify-center">
+      <% flash.each do |type, data| %>
+        <%= render NotificationComponent.new(type: type, data: data) %>
+      <% end %>
+    </div>
+  </div>
   
 </body>
 

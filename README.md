@@ -9,6 +9,12 @@
 - [Tailwindcss (2.1.2)](https://tailwindcss.com/)
 - [View_component](https://viewcomponent.org/)
 
+## Heroku Link
+[Quickstart](https://quickstart-rails-tailwind.herokuapp.com/)
+
+**Email:** test@test.com
+**Password:** 123456
+
 ## Local Development Setup
 - Install the latest [Node.js](https://nodejs.org) version. Make sure that [npm](https://www.npmjs.com/) is installed with it as well.
 - Install [yarn](https://classic.yarnpkg.com/en/docs/install/#mac-stable).

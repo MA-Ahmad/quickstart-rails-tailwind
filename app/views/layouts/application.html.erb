@@ -14,20 +14,20 @@
 
 <body>
 
-  <%= render 'shared/header' %>
+<%= render 'shared/header' %>
 
-  <div class="bg-gray-50 calc-h">
-      <%= yield %>
+<div class="bg-gray-50 calc-h">
+  <%= yield %>
+</div>
+
+<div class="fixed inset-0 px-4 py-6 pointer-events-none sm:p-6 sm:items-start sm:justify-end">
+  <div id="notifications" class="flex flex-col items-end justify-center">
+    <% flash.each do |type, data| %>
+      <%= render NotificationComponent.new(type: type, data: data) %>
+    <% end %>
   </div>
-  
-  <div class="fixed inset-0 px-4 py-6 pointer-events-none sm:p-6 sm:items-start sm:justify-end">
-    <div id="notifications" class="flex flex-col items-end justify-center">
-      <% flash.each do |type, data| %>
-        <%= render NotificationComponent.new(type: type, data: data) %>
-      <% end %>
-    </div>
-  </div>
-  
+</div>
+
 </body>
 
 </html>

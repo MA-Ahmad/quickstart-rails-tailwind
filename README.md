@@ -39,3 +39,7 @@ Contributions, issues and feature requests are welcome! Start by:
 ## Show your support
 
 Give a ⭐️ if you like this project!
+
+## Licence
+
+[MIT](https://github.com/MA-Ahmad/quickstart-rails-tailwind/blob/master/LICENSE) © Muhammad Ahmad

@@ -4,7 +4,7 @@
       <%= I18n.t("errors.messages.not_saved",
                  count: resource.errors.count,
                  resource: resource.class.model_name.human.downcase)
-       %>
+%>
     </h2>
     <ul>
       <% resource.errors.full_messages.each do |message| %>
@@ -17,8 +17,8 @@
     <% messages << data %>
   <% end %>
   <div class="fixed inset-0 px-4 py-6 pointer-events-none sm:p-6 sm:items-start sm:justify-end">
-      <div id="notifications" class="flex flex-col items-end justify-center">
-          <%= render NotificationComponent.new(type: 'error', data: {messages: messages }) %>
-      </div>
+    <div id="notifications" class="flex flex-col items-end justify-center">
+      <%= render NotificationComponent.new(type: 'error', data: {messages: messages}) %>
     </div>
+  </div>
 <% end %>

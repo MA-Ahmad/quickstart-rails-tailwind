@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   root to: 'home#index'
 
-  scope :page do
+  scope :pages do
     get '/team', to: 'pages#team'
     get '/features', to: 'pages#features'
     get '/projects', to: 'pages#projects'

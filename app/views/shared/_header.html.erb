@@ -71,9 +71,9 @@
                     <div data-menu-target="profileDropdown"
                         class="hidden origin-top-right absolute right-0 mt-2 w-48 rounded-md shadow-lg py-1 bg-white ring-1 ring-black ring-opacity-5 focus:outline-none z-10"
                         role="menu" aria-orientation="vertical" aria-labelledby="user-menu-button" tabindex="-1">
-                        <a href="<%= user_path(current_user.id) %>" class="block px-4 py-2 text-sm text-gray-700"
+                        <a href="<%= profile_path %>" class="block px-4 py-2 text-sm text-gray-700"
                             role="menuitem" tabindex="-1" id="user-menu-item-0">Your Profile</a>
-                        <a href="<%= edit_user_registration_path %>" class="block px-4 py-2 text-sm text-gray-700"
+                        <a href="<%= settings_account_path %>" class="block px-4 py-2 text-sm text-gray-700"
                             role="menuitem" tabindex="-1" id="user-menu-item-1">Settings</a>
                         <a href="<%= destroy_user_session_path %>" data-method="delete"
                             class="block px-4 py-2 text-sm text-gray-700" role="menuitem" tabindex="-1"

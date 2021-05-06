@@ -7,13 +7,14 @@
     <div class="col-span-1">
       <div class="px-2 py-2 space-y-3 bg-white border rounded-lg shadow-sm">
         <div class="flex flex-col space-y-2">
+          <button class="group bg-gray-500 focus:bg-gray-800 px-3 py-2 rounded-md">
+            <a href="#" class="text-white group-focus:text-yellow-300  text-sm font-medium"
+              aria-current="page">Profile</a>
+          </button>
           <a href="#"
-             class="text-gray-800 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
-             aria-current="page">Profile</a>
+            class="text-gray-800 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Email</a>
           <a href="#"
-             class="text-gray-800 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Email</a>
-          <a href="#"
-             class="text-gray-800 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Account</a>
+            class="text-gray-800 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Password</a>
         </div>
       </div>
     </div>
@@ -25,19 +26,19 @@
         </div>
         <%= render "devise/shared/error_messages", resource: @user %>
         <%= form_for(@user, url: user_path, html: {method: :put, class: "space-y-4"}) do |f| %>
-          <div>
-            <%= f.label :first_name, class: "label" %>
-            <%= f.text_field :first_name, autofocus: true, autocomplete: "first_name", placeholder: "First Name", class: "appearance-none rounded-md relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-t-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm" %>
-          </div>
+        <div>
+          <%= f.label :first_name, class: "label" %>
+          <%= f.text_field :first_name, autofocus: true, autocomplete: "first_name", placeholder: "First Name", class: "appearance-none rounded-md relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-t-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm" %>
+        </div>
 
-          <div>
-            <%= f.label :last_name, class: "label" %>
-            <%= f.text_field :last_name, autofocus: true, autocomplete: "last_name", placeholder: "Last Name", class: "appearance-none rounded-md relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-t-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm" %>
-          </div>
+        <div>
+          <%= f.label :last_name, class: "label" %>
+          <%= f.text_field :last_name, autofocus: true, autocomplete: "last_name", placeholder: "Last Name", class: "appearance-none rounded-md relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-t-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm" %>
+        </div>
 
-          <div>
-            <%= f.submit "Update", class: "group relative w-full flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500" %>
-          </div>
+        <div>
+          <%= f.submit "Update", class: "group relative w-full flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500" %>
+        </div>
 
         <% end %>
       </div>
@@ -48,23 +49,23 @@
           </h2>
         </div>
         <%= form_for(@user, url: user_path, html: {method: :put, class: "space-y-4"}) do |f| %>
-          <div>
-            <%= f.label :email, class: "label" %>
-            <%= f.email_field :email, autocomplete: "email", placeholder: "Email", class: "appearance-none rounded-md relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-t-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm" %>
-          </div>
+        <div>
+          <%= f.label :email, class: "label" %>
+          <%= f.email_field :email, autocomplete: "email", placeholder: "Email", class: "appearance-none rounded-md relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-t-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm" %>
+        </div>
 
-          <div>
-            <div class="flex items-center">
-              <%= f.label :current_password, class: "label" %>
-              <span class="text-xs pl-1 text-grey-dark"><em>(we need your current password to confirm your
-            changes)</em></span>
-            </div>
-            <%= f.password_field :current_password, autocomplete: "current-password", placeholder: "******", class: "appearance-none rounded-md relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-t-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm" %>
+        <div>
+          <div class="flex items-center">
+            <%= f.label :current_password, class: "label" %>
+            <span class="text-xs pl-1 text-grey-dark"><em>(we need your current password to confirm your
+                changes)</em></span>
           </div>
+          <%= f.password_field :current_password, autocomplete: "current-password", placeholder: "******", class: "appearance-none rounded-md relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-t-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm" %>
+        </div>
 
-          <div>
-            <%= f.submit "Update", class: "group relative w-full flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500" %>
-          </div>
+        <div>
+          <%= f.submit "Update", class: "group relative w-full flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500" %>
+        </div>
 
         <% end %>
       </div>
@@ -75,34 +76,34 @@
           </h2>
         </div>
         <%= form_for(@user, url: :update_password, html: {class: "space-y-4"}) do |f| %>
-          <div>
-            <div class="flex items-center">
-              <%= f.label :current_password, class: "label" %>
-              <span class="text-xs pl-1 text-grey-dark"><em>(we need your current password to confirm your
-            changes)</em></span>
-            </div>
-            <%= f.password_field :current_password, autocomplete: "current-password", placeholder: "******", class: "appearance-none rounded-md relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-t-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm" %>
+        <div>
+          <div class="flex items-center">
+            <%= f.label :current_password, class: "label" %>
+            <span class="text-xs pl-1 text-grey-dark"><em>(we need your current password to confirm your
+                changes)</em></span>
           </div>
+          <%= f.password_field :current_password, autocomplete: "current-password", placeholder: "******", class: "appearance-none rounded-md relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-t-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm" %>
+        </div>
 
-          <div>
-            <div class="flex items-center">
-              <%= f.label :new_password, class: "label" %>
-              <% if @minimum_password_length %>
-              <span class="text-xs pl-1 text-grey-dark"><em>(<%= @minimum_password_length %>
+        <div>
+          <div class="flex items-center">
+            <%= f.label :new_password, class: "label" %>
+            <% if @minimum_password_length %>
+            <span class="text-xs pl-1 text-grey-dark"><em>(<%= @minimum_password_length %>
                 characters minimum)</em></span>
-              <% end %>
-            </div>
-            <%= f.password_field :password, autocomplete: "new-password", placeholder: "******", class: "appearance-none rounded-md relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-t-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm" %>
+            <% end %>
           </div>
+          <%= f.password_field :password, autocomplete: "new-password", placeholder: "******", class: "appearance-none rounded-md relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-t-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm" %>
+        </div>
 
-          <div>
-            <%= f.label :password_confirmation, class: "label" %>
-            <%= f.password_field :password_confirmation, autocomplete: "new-password", placeholder: "******", class: "appearance-none rounded-md relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-t-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm" %>
-          </div>
+        <div>
+          <%= f.label :password_confirmation, class: "label" %>
+          <%= f.password_field :password_confirmation, autocomplete: "new-password", placeholder: "******", class: "appearance-none rounded-md relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-t-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm" %>
+        </div>
 
-          <div>
-            <%= f.submit "Update", class: "group relative w-full flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500" %>
-          </div>
+        <div>
+          <%= f.submit "Update", class: "group relative w-full flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500" %>
+        </div>
 
         <% end %>
       </div>

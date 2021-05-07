@@ -7,10 +7,11 @@
     <div class="col-span-1">
       <div class="px-2 py-2 space-y-3 bg-white border rounded-lg shadow-sm">
         <div class="flex flex-col space-y-2">
-          <button class="group bg-gray-500 focus:bg-gray-800 px-3 py-2 rounded-md">
-            <a href="#" class="text-white group-focus:text-yellow-300  text-sm font-medium"
+          <!-- <button class="group bg-gray-500 focus:bg-gray-300 px-3 py-2 rounded-md">
+            <a href="#" class="text-white group-focus:text-yellow-300 text-sm font-medium"
               aria-current="page">Profile</a>
-          </button>
+          </button> -->
+          <%= link_to "Account", settings_account_path, class: ["hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium", ("text-white bg-gray-700 focus:bg-gray-800" if request.path == settings_account_path)] %>
           <a href="#"
             class="text-gray-800 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Email</a>
           <a href="#"
